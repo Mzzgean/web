@@ -1,0 +1,950 @@
+<!DOCTYPE html>
+<html><head>
+		
+        <link rel="shortcut icon" href="../Desktop/网站大作业/css/img/bitbug_favicon.ico" />
+		<title>美食记</title>
+        <meta charset="utf-8" />
+	    <meta name="keywords" content="美食记"><!--关键词 找到网站-->
+        <mate name="description" content="欢迎来到美食记,时令菜"><!--网基本页的描述 提供信息-->
+		
+<!--开始折叠效果 -->
+<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+<!--效果-->
+<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<script src="http://cdn.static.runoob.com/libs/jquery/2.1.1/jquery.min.js"></script>
+	<script src="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/js/bootstrap.min.js"></script><!--下拉框加菜单效果 -->
+   <!-- 广告 -->
+ <link rel="stylesheet" href="css/xiaogua.css" type="text/css" />
+    
+    
+<style>  
+<!--padding电梯导航内容内边距 -->
+	*{margin:0;padding:0} 
+	.nav-h{
+	top:100px;
+	position:fixed;<!--固定定位-->
+	width:36px;
+	height:370px;
+	margin-left:50px;
+	background-color:#fff;
+	
+	}
+	.nav-h ul{
+		list-style:none; <!--去小黑点-->
+		background-color:blue;
+	}
+	.nav-h ul li{
+	width: 40px;
+	height: 50px;
+	padding-bottom: 3px;
+	padding-right: 3px;
+	padding-top: 3px;
+	padding-left: 3px;
+	margin-bottom: 2px;
+	background-color:  #99CCFF;
+	color: #0099cc; <!--文字颜色-->
+		font-size:12px; <!--文字大小-->
+		line-height:12px;<!--设置一行文字所占高度-->		
+	}
+	.nav-h ul li.text{
+	background-color: #0099CC;
+	color: #FFFFFF;
+	}
+	.nav-h ul li.topp{
+		background-color:#0099CC;
+	}
+	</style>
+   <!--广告-->
+<script type="text/javascript" src="http://api.map.baidu.com/api?key=&v=1.1&services=true"></script>    
+<script type="text/javascript" src="Js/adj.js"></script>
+    <img src="1/35.jpg" id="demo" />
+    <!--图片效果 -->  
+    <style>
+#myImg {
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+	border-radius: 38px;
+	float:left;
+	margin:38px;
+	hight:100px;
+}
+
+#myImg:hover {opacity: 0.7;}
+
+
+
+</style>
+ <!--折叠框内部 -->
+  <style>
+div.img {
+    border: 15px solid #fff;
+	
+}
+
+div.img:hover {
+    border: 1px solid #777;
+}
+
+div.img img {
+    width: 100%;
+    height: auto;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+</style>
+	</head>
+
+   
+<body>  
+    <div class="nav-h">
+    <ul>
+   	  <li class="text">导航</li>
+      <li><a href="#bs-example-navbar-collapse-1" >返回顶端</li>
+      <li><a href="#homee">推荐菜品</li>
+      <li><a href="#others">其他功能</li>
+      <li><a href="#" target="_blank">菜谱分类</li>
+      <li><a href="#" target="_blank">食材分类</li>
+      <li><a href="#" target="_blank">发布话题</li>
+      <li><a href="login.html" target="_blank">登陆注册</li>
+      <li><a href="#constain-our" >联系我们</li>
+      <li class="topp"><a href="#foott" >底部</li>
+     </ul>
+     
+</div>
+  <div class="container">
+			<!--头部开始-->
+  <div class="header">
+  <nav class="navbar navbar-default" >
+  <div class="container" style="background-color: deepskyblue">
+				    <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header" >
+  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+  <span class="sr-only">Toggle navigation</span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  <span class="icon-bar"></span>
+  </button>
+  <a class="navbar-brand" href="#">美食记</a>
+  </div>
+				
+				    <!-- Collect the nav links, forms, and other content for toggling -->
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+  <ul class="nav navbar-nav">
+  <li><img src="1/4.jpg" width="37" height="50 "></a></li></ul>
+  <ul class="nav navbar-nav">
+  <ul class="nav navbar-nav">
+  <li><img src="1/4.jpg" width="37" height="50"></a></li></ul>
+  <ul class="nav navbar-nav">
+  <li class="active"><a href="#">首页 <span class="sr-only">(current)</span></a></li>
+  
+				      <!--  菜谱下拉开始-->
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">菜谱<span class="caret"></span></a>
+  <ul class="dropdown-menu">
+  <li><a href="#">夏季食谱</a></li>
+  <li><a href="#">早餐</a></li>
+  <li><a href="#">凉菜</a></li>
+  <li><a href="#">主食</a></li>
+  <li><a href="#">人气菜</a></li>
+  <li><a href="#">甜点</a></li>
+  </ul>
+  </li>
+				        <!--食谱下拉结束-->
+				        
+				        <!--食材介绍开始-->
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">食材大全 <span class="caret"></span></a>
+  <ul class="dropdown-menu">
+  <li><a href="#">时令食材</a></li>
+  <li><a href="#">肉禽蛋</a></li>
+  <li><a href="#">水产品类</a></li>
+  <li><a href="#">蔬菜类</a></li>
+  <li><a href="#">果品类</a></li>
+  <li><a href="#">面乳制品</a></li>
+  <li><a href="#">调味料</a></li>
+  <li><a href="#">药食类</a></li>
+  </ul>
+  </li>
+				        <!--食材介绍结束-->
+				        
+				        <!--论坛下拉开始-->
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">论坛<span class="caret"></span></a>
+  <ul class="dropdown-menu">
+  <li><a href="#">街道布告栏</a></li>
+  <li><a href="#">食物研究所</a></li>
+  <li><a href="#">放毒区</a></li>
+  <li><a href="#">推荐-吃货地址</a></li>
+  </ul>
+  </li>
+				        <!--论坛下拉结束-->
+				        
+				        <!--发布话题开始-->
+  <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">发布话题 <span class="caret"></span></a>
+ <ul class="dropdown-menu">
+ <li><a href="#">发菜谱</a></li>
+ <li><a href="#">发话题</a></li>
+ <li><a href="#">发吃货地址</a></li>
+ </ul>
+ </li>
+				 <!--发布话题结束-->
+				        
+  </ul>
+  <!--搜索栏开始-->
+  <form class="navbar-form navbar-left">
+  <div class="form-group">
+  <input type="text" class="form-control" placeholder="搜索">
+  </div>
+  <button type="submit" class="btn btn-default">搜索</button> </form>
+				   <!--搜索栏结束-->
+				      
+				   <!--登录开始-->
+  <ul class="nav navbar-nav">
+  <li><a href="html/login.html" target="_blank">登录</a></li></ul>
+  
+				      <!--登录结束-->
+				      
+				      
+<ul class="nav navbar-nav navbar-right">
+  <li><a href="html/register.html" target="_blank">注册</a></li></ul>
+        </ul>
+                      
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+	</nav>
+</div>
+			<!--头部结束-->
+			
+			
+			<!--轮播图开始-->
+<div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
+  <!-- Indicators -->
+  <ol class="carousel-indicators">
+    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+  </ol>
+
+  <!-- Wrapper for slides -->
+  <div class="carousel-inner" role="listbox">
+    <div class="item active">
+    <img src="1/14.jpg" width="1139" height="333" alt="图片1">
+      <div class="carousel-caption">
+        
+      </div>
+    </div>
+    <div class="item">
+    <img src="1/13.jpg"  width="1139" height="333" alt="图片2" >
+      <div class="carousel-caption">
+      </div>
+      
+  </div>
+  <div class="item">
+    <img src="1/79.jpg" width="1139" height="333" alt="图片3" >
+      <div class="carousel-caption">
+      </div>
+      
+  </div>
+  
+
+  <!-- Controls -->
+  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+    <span class="sr-only">Previous</span>
+  </a>
+  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+    <span class="sr-only">Next</span>
+  </a>
+</div>
+			
+			<!--轮播图结束-->
+		<div>	
+		</div>
+		<!--第二部分-->
+	
+		
+<div>
+
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist" id="homee">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">时令推荐</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">热菜</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">冷菜</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">主食</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+
+  	
+    <div role="tabpanel" class="tab-pane active" id="home">
+    	<!--略缩图第一张-->
+ 	
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+		<img src="1/15.jpg" width="324" height="435" class="img-responsive"></a>
+      <p>两半黄豆芽</p>
+    </div>
+  </div>
+    	<!--略缩图第一张-->
+    	
+    	
+    	<!--略缩图第二张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+    <img src="1/16.jpg" width="324" height="435"
+		 alt="..."class="img-responsive"></a>
+      <p>薏米红豆粥</p>
+    </div>
+  </div>
+    	<!--略缩图第二张-->
+    	
+    	<!--略缩图第三张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+    <img src="1/17.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>红烧黄鳝</p>
+    </div>
+  </div>
+  <!--略缩图第三张-->
+  
+  <!--略缩图第四张-->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+		<img src="1/18.jpg" width="324" height="435"alt="..."class="img-responsive"></a>
+      <p>黄鳝盖饭</p>
+    </div>
+  </div>
+      <!--略缩图第四张-->	
+    	
+    	<!--略缩图第一张-->
+    	
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+		<img src="1/19.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>豆腐羹</p>
+    </div>
+  </div>
+    	<!--略缩图第一张-->
+    	
+    	
+    	<!--略缩图第二张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+		<img src="1/20.jpg" width="324" height="435"alt="..."class="img-responsive"></a>
+      <p>清蒸鱼</p>
+    </div>
+  </div>
+    	<!--略缩图第二张-->
+    	
+    	<!--略缩图第三张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+		<img src="1/21.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>鲜枇杷蜜枣肉粥</p>
+    </div>
+  </div>
+  <!--略缩图第三张-->
+  
+  <!--略缩图第四张-->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+		<img src="1/22.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>菠萝炒饭</p>
+    </div>
+  </div>
+      <!--略缩图第四张-->	
+   
+    </div>
+    
+    <div role="tabpanel" class="tab-pane" id="profile">
+    	
+    	
+    		<!--略缩图第一张-->
+    	
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+		<img src="1/26.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>腊肠炒荷兰豆</p>
+    </div>
+  </div>
+    	<!--略缩图第一张-->
+    	
+    	
+    	<!--略缩图第二张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+		<img src="1/27.jpg" width="324" height="435"" alt="..."class="img-responsive"></a>
+      <p>糖醋里脊</p>
+    </div>
+  </div>
+    	<!--略缩图第二张-->
+    	
+    	<!--略缩图第三张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/28.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>糖醋猪蹄</p>
+    </div>
+  </div>
+  <!--略缩图第三张-->
+  
+  <!--略缩图第四张-->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/29.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>红烧芋艿</p>
+    </div>
+  </div>
+      <!--略缩图第四张-->	
+    	
+    	<!--略缩图第一张 -->
+    	
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/30.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>清炖羊腿肉</p>
+    </div>
+  </div>
+    	<!--略缩图第一张-->
+    	
+    	
+    	<!--略缩图第二张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/31.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>美味炸排骨</p>
+    </div>
+  </div>
+    	<!--略缩图第二张-->
+    	
+    	<!--略缩图第三张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/32.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>蒜椒虾皮</p>
+    </div>
+  </div>
+  <!--略缩图第三张-->
+  
+  <!--略缩图第四张-->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/33.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>红烧排骨</p>
+    </div>
+  </div>
+      <!--略缩图第四张-->
+    	
+    	
+    </div>
+    
+    <div role="tabpanel" class="tab-pane" id="messages">
+    	
+    	<!--略缩图第一张-->
+    	
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/35.jpg" width="324" height="435"alt="..."class="img-responsive"></a>
+      <p>缤纷凉拌菜</p>
+    </div>
+  </div>
+    	<!--略缩图第一张-->
+    	
+    	
+    	<!--略缩图第二张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/36.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>凉拌冷面</p>
+    </div>
+  </div>
+    	<!--略缩图第二张-->
+    	
+    	<!--略缩图第三张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/37.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>七彩沙拉</p>
+    </div>
+  </div>
+  <!--略缩图第三张-->
+  
+  <!--略缩图第四张-->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/38.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>香辣手撕鸡胸肉</p>
+    </div>
+  </div>
+      <!--略缩图第四张-->	
+    	
+    	<!--略缩图第一张-->
+    	
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/39.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>果蔬沙拉</p>
+    </div>
+  </div>
+    	<!--略缩图第一张-->
+    	
+    	
+    	<!--略缩图第二张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/40.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>凉拌猪耳朵</p>
+    </div>
+  </div>
+    	<!--略缩图第二张-->
+    	
+    	<!--略缩图第三张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/41.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>椒盐黄花鱼</p>
+    </div>
+  </div>
+  <!--略缩图第三张-->
+  
+  <!--略缩图第四张-->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/42.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>凉拌辣萝卜</p>
+    </div>
+  </div>
+      <!--略缩图第四张-->	
+    	
+    	
+    	
+    </div>
+    
+    <div role="tabpanel" class="tab-pane" id="settings">
+    	<!--略缩图第一张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    	 <div class="thumbnail"><a href="步骤.html" class="div">
+													  <img src="1/45.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>红糖糕</p>
+    </div>
+  </div>
+    	<!--略缩图第一张-->
+    	
+    	
+    	<!--略缩图第二张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/48.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>鸡蛋萝卜丝饼</p>
+    </div>
+  </div>
+    	<!--略缩图第二张-->
+    	
+    	<!--略缩图第三张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/53.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>红豆饼</p>
+    </div>
+  </div>
+  <!--略缩图第三张-->
+  
+  <!--略缩图第四张-->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/54.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>炒河粉</p>
+    </div>
+  </div>
+      <!--略缩图第四张-->	
+    	
+    <!--略缩图第一张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    	 <div class="thumbnail"><a href="步骤.html" class="div">
+													  <img src="1/51.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>笋干榨面</p>
+    </div>
+  </div>
+    	<!--略缩图第一张-->
+    	
+    	
+    	<!--略缩图第二张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/52.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>砂锅水果粥</p>
+    </div>
+  </div>
+    	<!--略缩图第二张-->
+    	
+    	<!--略缩图第三张-->
+    	<div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+	<img src="1/55.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>酸辣粉</p>
+    </div>
+  </div>
+  <!--略缩图第三张-->
+  
+  <!--略缩图第四张-->
+  <div class="col-lg-3 col-md-4 col-sm-6 col-xs-6">
+    <div class="thumbnail"><a href="步骤.html" class="div">
+												 <img src="1/58.jpg" width="324" height="435" alt="..."class="img-responsive"></a>
+      <p>豆腐炒年糕</p>
+    </div>
+  </div>
+      <!--略缩图第四张-->		
+    	
+    	
+    	
+    </div>
+  </div>
+
+</div>
+
+</div>
+<!--第二部分结束-->
+		
+		
+	<!--第三部分开始-->
+		<nav aria-label="Page navigation">
+  <ul class="pagination">
+    <li>
+      <a href="../网站大作业/index2.html" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+	<li><a href="../网站大作业/index1.html">1</a></li>
+	<li><a href="../网站大作业/index1.html">2</a></li>
+    <li class="active"><a href="../网站大作业/index.html">3
+    <span class="sr-only">(current)</span></a></li>
+    <li><a href="../网站大作业/index4.html">4</a></li>
+    <li><a href="../网站大作业/index5.html">5</a></li>
+    <li>
+     
+      <a href="../网站大作业/index4.html" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+  </ul>
+</nav>
+		<!--第三部分结束-->	
+		
+		
+
+<h3 id="others">其他功能</h3>
+<div id="other">	
+<!--第一行-->
+<div class="panel-group" id="accordion">
+	<div class="panel panel-default">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseOne">
+					街道布告栏
+				</a>
+			</h4>
+		</div>
+		<div id="collapseOne" class="panel-collapse collapse in">
+			<div class="panel-body">
+            
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_fjords.jpg">
+      <img src="1/55.jpg" >
+    </a>
+    <div class="desc">一周热门</div>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_forest.jpg">
+       <img src="1/36.jpg" >
+    </a>
+    <div class="desc">人气菜肴</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="1/37.jpg" >
+    </a>
+    <div class="desc">夏季菜谱</div>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_mountains.jpg">
+       <img src="1/38.jpg" >
+    </a>
+    <div class="desc">新秀菜谱</div>
+  </div>
+</div>
+
+<div class="clearfix"></div>
+
+<div style="padding:6px;">
+				 
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-success">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseTwo">
+					食物研究所
+				</a>
+			</h4>
+		</div>
+		<div id="collapseTwo" class="panel-collapse collapse">
+			<div class="panel-body"><table width="200" border="1">
+ 
+</table>
+<div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/39.jpg" >
+    </a>
+    <div class="desc">瘦身美容</div>
+  </div>
+</div>
+
+				<tr>
+      <td ><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/40.jpg" >
+    </a>
+    <div class="desc">食疗食补</div>
+  </div>
+</div></td>
+      <td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/41.jpg" >
+    </a>
+    <div class="desc">饮食常识</div>
+  </div>
+</div></td>
+      <td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/42.jpg" >
+    </a>
+    <div class="desc">气血双补</div>
+  </div>
+</div></td>
+    </tr>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-info">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseThree">
+					深夜放毒区
+				</a>
+			</h4>
+		</div>
+		<div id="collapseThree" class="panel-collapse collapse">
+			<div class="panel-body">
+				<tr>
+      <td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+      <img src="1/43.jpg" >
+    </a>
+    <div class="desc">撸串啤酒</div>
+  </div>
+</div></td>
+      <td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/32.jpg" >
+    </a>
+    <div class="desc">火焰烧烤</div>
+  </div>
+</div></td>
+
+      <td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/31.jpg" >
+    </a>
+    <div class="desc">宵夜王者</div>
+  </div>
+</div></td>
+      <td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/29.jpg" >
+    </a>
+    <div class="desc">小炒之家</div>
+  </div>
+</div></td>
+    </tr>
+			</div>
+		</div>
+	</div>
+	<div class="panel panel-warning">
+		<div class="panel-heading">
+			<h4 class="panel-title">
+				<a data-toggle="collapse" data-parent="#accordion" 
+				   href="#collapseFour">
+					推荐吃货地址
+				</a>
+			</h4>
+		</div>
+		<div id="collapseFour" class="panel-collapse collapse">
+			<div class="panel-body">
+				 <tr>
+      <td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/54.jpg" >
+    </a>
+    <div class="desc">上海美食</div>
+  </div>
+</div></td>
+
+<td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/53.jpg" >
+    </a>
+    <div class="desc">成都美食</div>
+  </div>
+</div></td>
+
+<td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/48.jpg" >
+    </a>
+    <div class="desc">西安美食</div>
+  </div>
+</div></td>
+
+<td><div class="responsive">
+  <div class="img">
+    <a target="_blank" href="img_lights.jpg">
+       <img src="1/52.jpg" >
+    </a>
+    <div class="desc">浙江美食</div>
+  </div>
+</div></td>
+
+  </div>
+</div>
+</div></tr>
+
+<script type="text/javascript">
+	$(function () { $('#collapseFour').collapse({
+		toggle: false
+	})});
+	$(function () { $('#collapseTwo').collapse('show')});
+	$(function () { $('#collapseThree').collapse('toggle')});
+	$(function () { $('#collapseOne').collapse('hide')});
+</script>  
+
+ <!--广告 -->
+<div class="clearfix"></div>
+					</div>
+				</div>
+				<div class="clearfix"></div>
+				
+	</div>
+<address >
+	 <div style="width:100%;height:200px;border:#ccc solid 1px;" id="dituContent">
+     
+	   <p>&nbsp;</p>
+	   <p>&nbsp;</p>
+</div>
+</address>
+
+
+		<!--第五部分-->
+ 		
+	<!--第五部分-->
+    <p id="constain-our"></p>
+<link rel="stylesheet" type="text/css" href="css/case.css"/>
+<div class="main clearfix">
+  <div class="mod_fr1">
+   <div class="cust_tle">联系我们</div>
+    <div class="modlist">
+      <ul class="modpic">
+        		<li><a href="javascript:;" class="modmore"><img id="myImg" src="1/84.jpg" width="50" height="50" alt="21世纪不动产"><span><img src="1/90.jpg"  width="80" height="80" alt="21世纪不动产"></span></a></li>
+        		<li><a href="javascript:;" class="modmore"><img id="myImg" src="1/88.jpg" width="50" height="50" alt="绿地曼哈顿"><span><img src="1/91.jpg"  width="80" height="80" alt="绿地曼哈顿"></span></a></li>
+        		<li><a href="javascript:;" class="modmore"><img id="myImg" src="1/89.jpg" width="50" height="50" alt="诺亚新天地"><span><img src="1/92.jpg"  width="80" height="80" alt="诺亚新天地"></span></a></li>
+        		
+      </ul>
+    </div>
+  </div>
+</div>
+<!--底部部分-->
+<script type="text/javascript" src="js/jquery-1.8.2.min.js"></script>
+<script type="text/javascript">
+$(".modmore").hover(function(){
+  $(this).find("span").stop().animate({top: '100px'},100);
+},function(){
+  $(this).find("span").stop().animate({top: '260px'},100);
+})
+</script>
+
+</div>	
+		<!--第六部分-->
+		<div class="footer" id="foott">
+			<p style="text-align: center;" >
+            ©2018美食记    京ICP证100430号&nbsp;&nbsp;&nbsp;&nbsp;    京网文[2015] 0609-239号&nbsp;&nbsp;&nbsp;&nbsp; 新出发京零字东150005号&nbsp;&nbsp;&nbsp;&nbsp;京公网安备11010502007133号<br>违法和不良信息举报邮箱：1234567r.com &nbsp;&nbsp;&nbsp;&nbsp; 举报电话：13691127034&nbsp;&nbsp;&nbsp;&nbsp; <br>Copyright © 1998- 2018 Tencent All Rights Reserved<br >
+		
+			</p>
+		</div>
+		<!--第六部分-->
+		
+		
+</body>
+	
+	
+</html>

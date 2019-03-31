@@ -1,0 +1,31 @@
+@charset "utf-8";
+*{margin:0;padding:0;list-style-type:none;}
+h1,h2,h3,h4,h5,h6{font-size:50%;font-weight:100px;}
+a,img{border:0;}
+bodyy{font:12px/1.5 \5FAE\8F6F\96C5\9ED1,tahoma,arial,\5b8b\4f53;color:#368;}
+a{text-decoration:none;color:	#0000CD;}
+
+
+/*客户案例中心*/
+.cust_tle{display:block;line-height:60px;padding-left:25px;font-size:24px;color:black;}
+.cust_tle>span a{display:block;float:right;font-size:14px;color:#fff;margin-right:20px;}
+.cust_tle>span a:hover{color:#fff;}
+.cust_tle>p{font-size:16px;color:#666;margin:20px 20px 20px 0;line-height:25px;}
+.main{display:block;width:1140px;margin:0 auto;}
+.mod_banner{display:block;min-width:1100px;height:200px;background:url(images/pdt_banner01.jpg) no-repeat center center;overflow:hidden;margin:0 auto;}
+.modbox{display:block;position:absolute;top:75px;right:0px;width:440px;height:140px;padding:30px 60px 0 30px;overflow:hidden;}
+.modbox>h1{display:block;width:520px;margin-bottom:10px;font-size:28px;color:#fffff;}
+.modbox>p{line-height:18px;font-size:14px;color:#fffff;}
+.mod_fl{display:block;float:left;width:145px;margin-right:5px;overflow:hidden;}
+.mod_fr{display:block;float:right;width:948px;border:0px solid #fffff;}
+.modtle{display:block;line-height:0px;margin-bottom:5px;margin-top:10px;text-align:center;font-size:14px;color:#333;background:#fffff;}
+.modtle:hover{background:#666;color:#fffff;}
+.modnav{display:block;position:relative;width:150px;}
+.modnav li{display:block;float:left;width:70px;height:40px;margin-bottom:5px;margin-right:5px;}
+.modnav li a{display:block;text-align:center;line-height:40px;background:#fff;font-size:14px;color:#ffffff;}
+.modnav li a:hover{background:#ffffff;color:#ffffff;}
+.modlist{display:block;padding:25px 0 25px 25px;min-height:100px;}
+.modpic li{display:block;float:left;width:200px;height:240px;border:1px solid #ffffff;margin:0 27px 25px 0;}
+.modpic li a{display:block;position:relative;width:200px;height:200px;overflow:hidden;}
+.modpic li a span{display:block;position:absolute;left:0px;top:300px;width:200px;height:1px;background-color:#FFF;filter:alpha(opacity=90);-moz-opacity:0.9;opacity:0.9;text-align:center;font-size:14px;color:#666;}
+.modpic li a span p{line-height:40px;} 
